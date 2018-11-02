@@ -3,6 +3,7 @@ package com.binarysearch;
 
 public class bisearchA extends abstractBisearch {
 
+    @Override
     public int valuePos(int x){
         start();
         if(x < arr.get(left)){
@@ -28,6 +29,7 @@ public class bisearchA extends abstractBisearch {
         return -1;
     }
 
+    @Override
     public int insertPos(int x){
         start();
         if(x < arr.get(left)){
