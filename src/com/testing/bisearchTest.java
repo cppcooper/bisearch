@@ -1,20 +1,15 @@
 package com.testing;
 
-import com.binarysearch.bisearchesA;
-
-import static java.time.Duration.ofSeconds;
-import static org.junit.jupiter.api.Assertions.*;
-
+import com.binarysearch.*;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.function.Executable;
+import static org.junit.jupiter.api.Assertions.*;
+import static java.time.Duration.ofSeconds;
 
-class bisearchesATest {
-    bisearchesA B;
 
-    @BeforeEach
-    void setUp() {
-        B = new bisearchesA();
-    }
+
+abstract class bisearchTest {
+    abstractBisearch B;
 
     private void InfiniteLoopTest(Executable ex){
         assertTimeoutPreemptively(ofSeconds(6), ex);
