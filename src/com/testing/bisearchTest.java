@@ -1,15 +1,15 @@
 package com.testing;
 
 import com.binarysearch.*;
-import org.junit.jupiter.api.*;
+import org.junit.*;
 import org.junit.jupiter.api.function.Executable;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
 import static java.time.Duration.ofSeconds;
+import static org.junit.Assert.assertEquals;
 
 
-
-abstract class bisearchTest {
-    abstractBisearch B;
+public abstract class bisearchTest {
+    protected abstractBisearch B;
 
     private void InfiniteLoopTest(Executable ex){
         assertTimeoutPreemptively(ofSeconds(6), ex);
@@ -26,7 +26,7 @@ abstract class bisearchTest {
     }
 
     @Test
-    void valuePos() {
+    public void valuePos() {
         step1_MakeOdd();
         InfiniteLoopTest(()->{
             B.valuePos(2);
@@ -63,7 +63,7 @@ abstract class bisearchTest {
     }
 
     @Test
-    void insertPos() {
+    public void insertPos() {
         step1_MakeOdd();
         InfiniteLoopTest(()->{
             B.insertPos(1);
@@ -102,7 +102,7 @@ abstract class bisearchTest {
     }
 
     @Test
-    void nextLowestPos() {
+    public void nextLowestPos() {
         step1_MakeOdd();
         InfiniteLoopTest(()->{
             B.nextLowestPos(1);
@@ -141,7 +141,7 @@ abstract class bisearchTest {
     }
 
     @Test
-    void nextHighestPos() {
+    public void nextHighestPos() {
         step1_MakeOdd();
         InfiniteLoopTest(()->{
             B.nextHighestPos(1);

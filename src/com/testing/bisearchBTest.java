@@ -1,11 +1,11 @@
 package com.testing;
 
 import com.binarysearch.*;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.Before;
 
 public class bisearchBTest extends bisearchTest {
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void setUp() {
         B = new bisearchB();
     }
 }

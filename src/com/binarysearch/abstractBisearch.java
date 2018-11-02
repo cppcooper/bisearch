@@ -3,7 +3,7 @@ package com.binarysearch;
 import java.util.ArrayList;
 
 abstract public class abstractBisearch {
-    public ArrayList<Integer> arr = new ArrayList<>(50);
+    public ArrayList<Integer> arr = new ArrayList<>(50);;
     protected int left;
     protected int right;
     protected int mid;
