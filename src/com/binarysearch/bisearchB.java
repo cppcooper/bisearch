@@ -22,8 +22,6 @@ public class bisearchB extends abstractBisearch {
                     if(left==right){
                         return -1;
                     }
-                }else{
-                    return mid;
                 }
             }
         }
@@ -49,8 +47,6 @@ public class bisearchB extends abstractBisearch {
                     if (left == right) {
                         return right;
                     }
-                } else {
-                    return mid;
                 }
             }
         }

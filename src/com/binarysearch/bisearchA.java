@@ -5,9 +5,9 @@ public class bisearchA extends abstractBisearch {
 
     public int valuePos(int x){
         start();
-        if(x < arr.get(0)){
+        if(x < arr.get(left)){
             return -1;
-        } else if (x > arr.get(arr.size()-1)) {
+        } else if (x > arr.get(right)) {
             return -1;
         } else {
             while (left <= right) {
@@ -30,9 +30,9 @@ public class bisearchA extends abstractBisearch {
 
     public int insertPos(int x){
         start();
-        if(x < arr.get(0)){
+        if(x < arr.get(left)){
             return 0;
-        } else if (x > arr.get(arr.size()-1)) {
+        } else if (x > arr.get(right)) {
             return arr.size();
         } else {
             while (left <= right) {
@@ -42,7 +42,7 @@ public class bisearchA extends abstractBisearch {
                 } else if (v > x) {
                     right = mid;
                     if (right == left) {
-                        return right;
+                        break;
                     }
                 } else {
                     return mid;
